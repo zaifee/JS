@@ -55,3 +55,23 @@ Return type of variables in JavaScript
        Function  =>  function
        Object  =>  object
        */
+
+// ****** ----------- Stack, heap ------- 
+// Stack(Primitive), heap(Non-Primitive)
+let myYoutubeName = "fitnessVlog";
+
+let anotherName = myYoutubeName;
+anotherName = "EnglishHouseAcademybyNawaz";
+console.log(myYoutubeName);
+console.log(anotherName); 
+
+//Heap 
+let userOne = {
+    name: "zaif",
+    designation: "Engineer"
+}
+
+let userTwo = userOne;
+userTwo.designation = "SoftwareEngineer";
+console.log(userOne.designation);
+console.log(userTwo.designation); //ref type
