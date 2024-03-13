@@ -34,7 +34,7 @@ console.log(array);
 console.log(myArray1);
 console.log(`Your original array is ${array}`);
 
-
+//splice modify the orginial array while slice do not modify the array.
 const myArray21 = array.splice(1, 3);
 console.log(myArray21);
 console.log(`Original Array is: ${array}`);
