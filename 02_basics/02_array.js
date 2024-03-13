@@ -1,35 +1,35 @@
-const marvelHeros = ['thor', 'IronMan', 'spiderman'];
-const bollywoodHeros = ['superman', 'batman', 'jaduman'];
+const marvael_heros = ["spiderman", "batman", "helloji"];
+const indian_heros = ["shaktiman", "batman"];
 
-// marvelHeros.push(bollywoodHeros);
-// console.log(marvelHeros); //array inside another array 
+// marvael_heros.push(indian_heros);
+// console.log(marvael_heros);
+// console.log(marvael_heros[2][2]);
 
-// console.log(marvelHeros[3][1]); 
+const mergeArray = marvael_heros.concat(indian_heros);
+// console.log(mergeArray);
 
-//Instead Push we can used the concate method 
-const newArray = marvelHeros.concat(bollywoodHeros);
-console.log(newArray);
+//Spread Operator
+const myAllHeros = [...marvael_heros, ...indian_heros];
+console.log(myAllHeros);
 
-//Instead of concate we can used spreadout 
-//remember spread of operator like a glass of water fall on the ground
-const all_newArray = [...marvelHeros, ...bollywoodHeros];
-console.log(all_newArray);
+//Solve the depth of the array 
+const anoArray = [1,2,3,[4,5,6, [7]]];
+//flat takes depth of the array how much it has to solve
+const real_another_array = anoArray.flat(Infinity);
 
-const arrayInsideAnotherArray = [1,2,3,4,5,[6,5,4,[8,7,5], 6]];
 
-const finalAns = arrayInsideAnotherArray.flat(Infinity);
 
-// console.log(finalAns);
+//if we want the data in array format then we can do this 
+console.log(Array.isArray("Nawaz")); //it returns boolean value
+console.log(Array.from("Nawaz")); //it makes the array now
 
-//Asking whether it is a array 
-console.log(Array.isArray("Nawaz"));
-//convert into the array 
-console.log(Array.from("Nawaz"));
-// console.log(Array.from({name:Nawaz})); //intersting case 
-
+console.log(Array.from({name : "faraz"})); //interesting case
+//line 26 returns the empty array 
 
 let score1 = 100;
 let score2 = 200;
 let score3 = 300;
+//convert into array 
+console.log(Array.of(score1, score2, score3));
 
-console.log(Array.of(score1,score2, score3));
+
