@@ -40,3 +40,10 @@ JSlike.greeting = function(){
     console.log("Hello Js Users");
 }
 console.log(JSlike.greeting());
+
+//Accessing the same object with the function
+JSlike.greetingTwo = function(){
+    console.log(`hello! Js Users ${this.fullName
+    }`);
+}
+console.log(JSlike.greetingTwo());
