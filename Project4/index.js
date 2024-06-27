@@ -54,9 +54,9 @@ function checkGuess(guess) {
   }
 }
 
-function displayGuess() {
+function displayGuess(guess) {
   userInput.value = '';
-  guessSlot.innerHTML += `${guess}`;
+  guessSlot.innerHTML += `${guess} , `;
   numGuess++;
   remRes.innerHTML = `${11 - numGuess}`;
 }
@@ -67,6 +67,34 @@ function displayMessage(message) {
   lowOrHi.innerHTML = `<h2>${message}</h2>`;
 }
 
-function newGame() {}
+function endGame() {
+  userInput.value  = ' '; //user ki input empty kar rahe hai
+  userInput.setAttribute('disabled', ' '); //key - value
+  p.classList.add('button');
+  p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
+  startOver.appendChild(p);
+  playGame = false;
+  newGame();
 
-function endGame() {}
+
+}
+
+
+function newGame() {
+ const newGameBtn = document.querySelector('#newGame');
+ newGameBtn.addEventListener('click', function(e){
+   //before playgame reset all the other variables
+   randomNumber = Math.round(Math.random() * 10 + 1);
+   prevGuess = [];
+   numGuess = 1;
+   guessSlot.innerHTML = ' ';
+   remRes.innerHTML = `${11 - numGuess} `;
+   userInput.removeAttribute('disabled');
+   startOver.removeChild(p);
+   playGame = true;
+
+ })
+
+}
+
+
